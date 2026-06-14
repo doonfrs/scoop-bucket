@@ -1,0 +1,19 @@
+name: Excavator
+
+# Periodically checks for new releases (via the manifest's checkver/autoupdate),
+# recomputes the hash, and commits the updated manifest. Zero-touch Scoop updates.
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  excavate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Excavator
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'
