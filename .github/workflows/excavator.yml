@@ -1,17 +1,26 @@
 name: Excavator
 
-# Periodically checks for new releases (via the manifest's checkver/autoupdate),
-# recomputes the hash, and commits the updated manifest. Zero-touch Scoop updates.
+# Manual fallback only.
+#
+# Releases are published by the app repo's scripts/publish.ps1, which commits this
+# bucket's manifest directly with the version, url and hash it just uploaded.
+#
+# This used to run on a schedule, but checkver resolves "latest release" without
+# looking at which assets it carries: every macOS-only release (dmg, no Windows
+# zip) made the run fail, and the manifest sat stranded on an old version while
+# the failures scrolled by every 30 minutes. Dispatch it by hand if the manifest
+# ever needs to be reconciled from the releases repo.
 on:
-  schedule:
-    - cron: '*/30 * * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   excavate:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Excavator
         uses: ScoopInstaller/GithubActions@main
         env:
