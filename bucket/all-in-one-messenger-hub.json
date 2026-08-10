@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/doonfrs/all-in-one-messenger-hub-releases/releases/download/v1.1.10/AllInOneMessengerHub-1.1.10-win-x64.zip",
-            "hash": "82b9943ae723897ce904a2900705938b34bbc671a54671f173a39df8efbfcb87"
+            "hash": "0b35c7de21cc898a282845ad0ea74ee1bfd9fa459a82a5ff15338bb22b6160e0"
         }
     },
     "bin": "all_in_one_messenger_hub.exe",
