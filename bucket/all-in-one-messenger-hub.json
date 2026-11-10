@@ -1,12 +1,12 @@
 {
-    "version": "1.1.56",
+    "version": "1.1.57",
     "description": "Manage all your messaging platforms in one place.",
     "homepage": "https://onemessengerhub.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/doonfrs/all-in-one-messenger-hub-releases/releases/download/v1.1.56/AllInOneMessengerHub-1.1.56-win-x64.zip",
-            "hash": "d5debb6f4d43215a2e04531681e47622a5db6fbe983b45c63060406f22d5feb3"
+            "url": "https://github.com/doonfrs/all-in-one-messenger-hub-releases/releases/download/v1.1.57/AllInOneMessengerHub-1.1.57-win-x64.zip",
+            "hash": "b37ccb99f407e3006e016042d46502c09e7d8cb5225289d0a188af8bd347b62b"
         }
     },
     "bin": "all_in_one_messenger_hub.exe",
